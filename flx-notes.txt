@@ -1,0 +1,7 @@
+some notes
+---------------
+
+getDerivedStateFromProps:
+
+-  is always static
+-  must return something
