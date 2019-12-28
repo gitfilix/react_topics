@@ -3,5 +3,32 @@ some notes
 
 getDerivedStateFromProps:
 
--  is always static
--  must return something
+  -  is always static
+  -  must return something
+
+
+shouldComponentUpdate:
+
+  - usefull if component should (re-)render or not.
+  - depending on the nextState OR the receiving nextProps
+      if(nextState.name === 'steven') { return false }
+  - must return false /true
+
+componentDidUpdate:
+  - executed after a re-rendering was executed
+  - works like a callback
+  - has the scope backwards to access prevProps, and prevState
+  - componentDidUpdate(prevProps, prevState) {}
+
+
+
+getSnapshotBeforeUpdate:
+  - has prevProps and prevState as arguments
+  - get data before componentDidUpdate get executed
+  - snapshot can be use on componentDidUpdate as 3rd argument
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log(snapshot)
+  }
+
+  
