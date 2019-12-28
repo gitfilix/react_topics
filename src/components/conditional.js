@@ -1,30 +1,33 @@
-import React from 'react';
+import React, { Component} from 'react';
 
+// clasbased
+class Conditional extends Component {
 
-const Conditional = () => {
-
-  const returnValue = () => {
-    return false
+  state = {
+    loading : true
   }
 
-  const showIt = () => {
-    return (
-      returnValue() ?
-      <div>
-      <p>Conditional is true</p>
-      </div>
-      :
-      <div>
-      <p>Conditional is false</p>
-      </div>
-    )
+  componentDidMount(){
+    setTimeout(()=>{
+      this.setState({
+        loading: false
+      })
+    }, 1200)
   }
 
-    return(
-    <div>
-    {showIt()}
-    </div>
-    )
+  render(){
+    if(this.state.loading){
+      return(
+        <div>hi, its loading</div>
+      )
+    } else {
+      return (
+        <div>hi, its rendered</div>
+      )
+    }
+  }
+
+
 }
 
 export default Conditional;
