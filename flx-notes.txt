@@ -31,4 +31,11 @@ getSnapshotBeforeUpdate:
     console.log(snapshot)
   }
 
-  
+useEffect
+------------
+can replace 'componentDidMount' and 'componentWillUnmount'
+
+
+useEffect(() => {
+  log('will be called every value of pw field is changed')
+}, [values.password])

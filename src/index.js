@@ -7,6 +7,7 @@ import Posts from './components/posts';
 import Profile from './components/profile';
 import PostItem from './components/post_item';
 import Conditional from './components/conditional';
+import Hooks from './components/hooks';
 
 const App = () => (
     <BrowserRouter>
@@ -15,8 +16,9 @@ const App = () => (
 
             <NavLink to="/posts" activeStyle={{ color:'red'}} activeClassName="selected">Posts</NavLink><br/>
             <NavLink to="/conditional" activeStyle={{ color:'red'}} activeClassName="selected">Conditional</NavLink><br/>
-
             <NavLink to="/profile"activeStyle={{ color:'red'}} activeClassName="selected">Profile</NavLink><br/>
+            <NavLink to="/hooks"activeStyle={{ color:'blue'}} activeClassName="selected">Hooks repetition</NavLink><br/>
+
             <br/><br/>
         </header>
         <Switch>
@@ -25,6 +27,7 @@ const App = () => (
             <Route path="/profile"  component={Profile}/>
             <Route path="/"  exact component={Home}/>
             <Route path="/conditional"  exact component={Conditional}/>
+            <Route path="/hooks"  exact component={Hooks}/>
             <Route render={()=> <h3>Oops, page not found</h3>}/>
         </Switch>
 
