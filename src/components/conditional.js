@@ -17,8 +17,8 @@ class Conditional extends Component {
 
   render(){
     if(this.state.loading){
-      return(
-        <div>hi, its loading...</div>
+      return (
+        <div>Loading...</div>
       )
     } else {
       return (
